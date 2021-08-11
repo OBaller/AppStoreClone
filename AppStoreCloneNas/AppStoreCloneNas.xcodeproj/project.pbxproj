@@ -14,6 +14,7 @@
 		B4C19FD626C3C3CE009D97C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C19FD426C3C3CE009D97C6 /* LaunchScreen.storyboard */; };
 		B4C19FE026C3C9EF009D97C6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */; };
 		B4C19FE226C425AB009D97C6 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FE126C425AB009D97C6 /* AppSearchController.swift */; };
+		B4C19FE626C446BE009D97C6 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FE526C446BE009D97C6 /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B4C19FD726C3C3CE009D97C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		B4C19FE126C425AB009D97C6 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
+		B4C19FE526C446BE009D97C6 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,33 @@
 		B4C19FC826C3C3B8009D97C6 /* AppStoreCloneNas */ = {
 			isa = PBXGroup;
 			children = (
+				B4C19FE426C44608009D97C6 /* Views */,
 				B4C19FC926C3C3B8009D97C6 /* AppDelegate.swift */,
 				B4C19FCB26C3C3B8009D97C6 /* SceneDelegate.swift */,
 				B4C19FCD26C3C3B8009D97C6 /* ViewController.swift */,
 				B4C19FD226C3C3CE009D97C6 /* Assets.xcassets */,
 				B4C19FD426C3C3CE009D97C6 /* LaunchScreen.storyboard */,
 				B4C19FD726C3C3CE009D97C6 /* Info.plist */,
+				B4C19FE326C445D5009D97C6 /* Controllers */,
+			);
+			path = AppStoreCloneNas;
+			sourceTree = "<group>";
+		};
+		B4C19FE326C445D5009D97C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */,
 				B4C19FE126C425AB009D97C6 /* AppSearchController.swift */,
 			);
-			path = AppStoreCloneNas;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4C19FE426C44608009D97C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4C19FE526C446BE009D97C6 /* SearchResultCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 				B4C19FE226C425AB009D97C6 /* AppSearchController.swift in Sources */,
 				B4C19FCE26C3C3B8009D97C6 /* ViewController.swift in Sources */,
 				B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */,
+				B4C19FE626C446BE009D97C6 /* SearchResultCell.swift in Sources */,
 				B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
