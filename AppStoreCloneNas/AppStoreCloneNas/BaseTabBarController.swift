@@ -14,9 +14,9 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [
-            createNavController(viewController: UIViewController(), title: "Today", imageName: "square.and.arrow.down"),
-            createNavController(viewController: UIViewController(), title: "Apps", imageName: "square.and.pencil"),
-            createNavController(viewController: AppSearchController(), title: "Search", imageName: "tray")
+            createNavController(viewController: UIViewController(), title: "Today", imageName: "todays"),
+            createNavController(viewController: UIViewController(), title: "Apps", imageName: "apps"),
+            createNavController(viewController: AppSearchController(), title: "Search", imageName: "search")
         ]
     }
     
@@ -27,7 +27,7 @@ class BaseTabBarController: UITabBarController {
         viewController.navigationItem.title = title
         viewController.view.backgroundColor = .white
         navController.tabBarItem.title = title
-        navController.tabBarItem.image = UIImage(systemName: imageName)
+        navController.tabBarItem.image = UIImage(named: imageName)
         return navController
     }
 }

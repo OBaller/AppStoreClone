@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "magnifying-glass-computer-file-png-favpng-jHQnTzv92DVQiUPttsZ1G8VcK_t.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "today_icon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

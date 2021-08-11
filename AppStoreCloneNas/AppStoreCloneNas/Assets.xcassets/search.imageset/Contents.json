@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "searchIcon-removebg-preview.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "search@3x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
