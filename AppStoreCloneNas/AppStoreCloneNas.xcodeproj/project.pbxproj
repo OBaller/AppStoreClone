@@ -13,6 +13,7 @@
 		B4C19FD326C3C3CE009D97C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C19FD226C3C3CE009D97C6 /* Assets.xcassets */; };
 		B4C19FD626C3C3CE009D97C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C19FD426C3C3CE009D97C6 /* LaunchScreen.storyboard */; };
 		B4C19FE026C3C9EF009D97C6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */; };
+		B4C19FE226C425AB009D97C6 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FE126C425AB009D97C6 /* AppSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B4C19FD526C3C3CE009D97C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4C19FD726C3C3CE009D97C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		B4C19FE126C425AB009D97C6 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B4C19FD426C3C3CE009D97C6 /* LaunchScreen.storyboard */,
 				B4C19FD726C3C3CE009D97C6 /* Info.plist */,
 				B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */,
+				B4C19FE126C425AB009D97C6 /* AppSearchController.swift */,
 			);
 			path = AppStoreCloneNas;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C19FE026C3C9EF009D97C6 /* BaseTabBarController.swift in Sources */,
+				B4C19FE226C425AB009D97C6 /* AppSearchController.swift in Sources */,
 				B4C19FCE26C3C3B8009D97C6 /* ViewController.swift in Sources */,
 				B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */,
 				B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */,
