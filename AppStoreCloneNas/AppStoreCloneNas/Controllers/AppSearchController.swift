@@ -4,7 +4,7 @@
 //
 //  Created by Decagon on 11/08/2021.
 //
-
+import SDWebImage
 import UIKit
 
 private let reuseIdentifier = "Cell"
@@ -40,11 +40,8 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
-        let appResult = appResults[indexPath.item]
-        cell.nameLabel.text = appResult.trackName
-        cell.categoryLabel.text = appResult.primaryGenreName
-        cell.ratingsLabel.text = "Rating \(appResult.averageUserRating ?? 0)"
-        return  cell
+        cell.appResult = appResults[indexPath.item]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
