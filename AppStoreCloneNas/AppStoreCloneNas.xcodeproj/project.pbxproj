@@ -18,6 +18,7 @@
 		B4C19FE926C5400C009D97C6 /* UIView + Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FE826C5400B009D97C6 /* UIView + Layout.swift */; };
 		B4C19FEB26C55304009D97C6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FEA26C55304009D97C6 /* VerticalStackView.swift */; };
 		B4C19FEE26C5F03B009D97C6 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FED26C5F03B009D97C6 /* SearchResult.swift */; };
+		B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF026C5FB01009D97C6 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B4C19FE826C5400B009D97C6 /* UIView + Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Layout.swift"; sourceTree = "<group>"; };
 		B4C19FEA26C55304009D97C6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		B4C19FED26C5F03B009D97C6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		B4C19FF026C5FB01009D97C6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		B4C19FC826C3C3B8009D97C6 /* AppStoreCloneNas */ = {
 			isa = PBXGroup;
 			children = (
+				B4C19FEF26C5FAD7009D97C6 /* NetworkService */,
 				B4C19FEC26C5F019009D97C6 /* Models */,
 				B4C19FE726C53FBF009D97C6 /* Helpers */,
 				B4C19FE426C44608009D97C6 /* Views */,
@@ -112,6 +115,14 @@
 				B4C19FED26C5F03B009D97C6 /* SearchResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B4C19FEF26C5FAD7009D97C6 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				B4C19FF026C5FB01009D97C6 /* Service.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */,
 				B4C19FE926C5400C009D97C6 /* UIView + Layout.swift in Sources */,
 				B4C19FEB26C55304009D97C6 /* VerticalStackView.swift in Sources */,
+				B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */,
 				B4C19FE626C446BE009D97C6 /* SearchResultCell.swift in Sources */,
 				B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */,
 			);
