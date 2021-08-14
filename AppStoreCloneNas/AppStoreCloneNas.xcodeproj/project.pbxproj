@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FC926C3C3B8009D97C6 /* AppDelegate.swift */; };
 		B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FCB26C3C3B8009D97C6 /* SceneDelegate.swift */; };
-		B4C19FCE26C3C3B8009D97C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FCD26C3C3B8009D97C6 /* ViewController.swift */; };
 		B4C19FD326C3C3CE009D97C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C19FD226C3C3CE009D97C6 /* Assets.xcassets */; };
 		B4C19FD626C3C3CE009D97C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C19FD426C3C3CE009D97C6 /* LaunchScreen.storyboard */; };
 		B4C19FE026C3C9EF009D97C6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */; };
@@ -21,13 +20,14 @@
 		B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF026C5FB01009D97C6 /* Service.swift */; };
 		B4C19FF426C60744009D97C6 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B4C19FF326C60744009D97C6 /* SDWebImage */; };
 		B4C19FF626C60744009D97C6 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B4C19FF526C60744009D97C6 /* SDWebImageMapKit */; };
+		B4C19FF926C6EB03009D97C6 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF826C6EB02009D97C6 /* AppsController.swift */; };
+		B4C19FFC26C82C24009D97C6 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4C19FC626C3C3B8009D97C6 /* AppStoreCloneNas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreCloneNas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C19FC926C3C3B8009D97C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C19FCB26C3C3B8009D97C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4C19FCD26C3C3B8009D97C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4C19FD226C3C3CE009D97C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4C19FD526C3C3CE009D97C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4C19FD726C3C3CE009D97C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		B4C19FEA26C55304009D97C6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		B4C19FED26C5F03B009D97C6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		B4C19FF026C5FB01009D97C6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B4C19FF826C6EB02009D97C6 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
+		B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +74,13 @@
 		B4C19FC826C3C3B8009D97C6 /* AppStoreCloneNas */ = {
 			isa = PBXGroup;
 			children = (
+				B4C19FF726C6EA97009D97C6 /* Apps */,
 				B4C19FEF26C5FAD7009D97C6 /* NetworkService */,
 				B4C19FEC26C5F019009D97C6 /* Models */,
 				B4C19FE726C53FBF009D97C6 /* Helpers */,
 				B4C19FE426C44608009D97C6 /* Views */,
 				B4C19FC926C3C3B8009D97C6 /* AppDelegate.swift */,
 				B4C19FCB26C3C3B8009D97C6 /* SceneDelegate.swift */,
-				B4C19FCD26C3C3B8009D97C6 /* ViewController.swift */,
 				B4C19FD226C3C3CE009D97C6 /* Assets.xcassets */,
 				B4C19FD426C3C3CE009D97C6 /* LaunchScreen.storyboard */,
 				B4C19FD726C3C3CE009D97C6 /* Info.plist */,
@@ -99,6 +101,7 @@
 		B4C19FE426C44608009D97C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4C19FFA26C82BE1009D97C6 /* Apps */,
 				B4C19FE526C446BE009D97C6 /* SearchResultCell.swift */,
 			);
 			path = Views;
@@ -127,6 +130,22 @@
 				B4C19FF026C5FB01009D97C6 /* Service.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		B4C19FF726C6EA97009D97C6 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				B4C19FF826C6EB02009D97C6 /* AppsController.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		B4C19FFA26C82BE1009D97C6 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C19FE026C3C9EF009D97C6 /* BaseTabBarController.swift in Sources */,
+				B4C19FF926C6EB03009D97C6 /* AppsController.swift in Sources */,
+				B4C19FFC26C82C24009D97C6 /* AppsGroupCell.swift in Sources */,
 				B4C19FEE26C5F03B009D97C6 /* SearchResult.swift in Sources */,
 				B4C19FE226C425AB009D97C6 /* AppSearchController.swift in Sources */,
-				B4C19FCE26C3C3B8009D97C6 /* ViewController.swift in Sources */,
 				B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */,
 				B4C19FE926C5400C009D97C6 /* UIView + Layout.swift in Sources */,
 				B4C19FEB26C55304009D97C6 /* VerticalStackView.swift in Sources */,
