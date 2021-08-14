@@ -22,6 +22,8 @@
 		B4C19FF626C60744009D97C6 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B4C19FF526C60744009D97C6 /* SDWebImageMapKit */; };
 		B4C19FF926C6EB03009D97C6 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF826C6EB02009D97C6 /* AppsController.swift */; };
 		B4C19FFC26C82C24009D97C6 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */; };
+		B4C19FFE26C8427D009D97C6 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFD26C8427D009D97C6 /* BaseListController.swift */; };
+		B4C1A00026C842CB009D97C6 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFF26C842CB009D97C6 /* AppsHorizontalController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B4C19FF026C5FB01009D97C6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B4C19FF826C6EB02009D97C6 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
 		B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
+		B4C19FFD26C8427D009D97C6 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
+		B4C19FFF26C842CB009D97C6 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			children = (
 				B4C19FDF26C3C9EF009D97C6 /* BaseTabBarController.swift */,
 				B4C19FE126C425AB009D97C6 /* AppSearchController.swift */,
+				B4C19FFD26C8427D009D97C6 /* BaseListController.swift */,
+				B4C19FFF26C842CB009D97C6 /* AppsHorizontalController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 				B4C19FEB26C55304009D97C6 /* VerticalStackView.swift in Sources */,
 				B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */,
 				B4C19FE626C446BE009D97C6 /* SearchResultCell.swift in Sources */,
+				B4C19FFE26C8427D009D97C6 /* BaseListController.swift in Sources */,
+				B4C1A00026C842CB009D97C6 /* AppsHorizontalController.swift in Sources */,
 				B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
