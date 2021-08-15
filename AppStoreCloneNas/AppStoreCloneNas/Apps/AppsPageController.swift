@@ -17,7 +17,20 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: celId)
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        
+        fetchData()
     }
+    fileprivate func fetchData() {
+        print("Fetch games data")
+        Service.shared.fetchGames { (appGroup, error) in
+            if let error = error {
+                print("Failed to fetch games", error)
+                return
+            }
+            print(appGroup?.feed.results)
+        }
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
         return header
