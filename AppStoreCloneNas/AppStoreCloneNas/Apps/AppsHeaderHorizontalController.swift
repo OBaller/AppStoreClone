@@ -1,47 +1,39 @@
 //
-//  AppsController.swift
+//  AppsHeaderHorizontalController.swift
 //  AppStoreCloneNas
 //
-//  Created by Decagon on 13/08/2021.
+//  Created by Decagon on 15/08/2021.
 //
 
 import UIKit
 
-class AppsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-   fileprivate let celId = "id"
-    
+class AppsHeaderHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout {
+    let cellId = "cellId"
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
+        collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
         
-        collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: celId)
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: celId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 300)
+        return .init(width: view.frame.width - 48, height: view.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 16, left: 0, bottom: 0, right: 0)
+        return .init(top: 0, left: 16, bottom: 0, right: 0)
     }
     
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-
-
 }

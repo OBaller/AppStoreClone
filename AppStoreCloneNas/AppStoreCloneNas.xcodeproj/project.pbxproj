@@ -20,12 +20,15 @@
 		B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF026C5FB01009D97C6 /* Service.swift */; };
 		B4C19FF426C60744009D97C6 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B4C19FF326C60744009D97C6 /* SDWebImage */; };
 		B4C19FF626C60744009D97C6 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B4C19FF526C60744009D97C6 /* SDWebImageMapKit */; };
-		B4C19FF926C6EB03009D97C6 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF826C6EB02009D97C6 /* AppsController.swift */; };
+		B4C19FF926C6EB03009D97C6 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FF826C6EB02009D97C6 /* AppsPageController.swift */; };
 		B4C19FFC26C82C24009D97C6 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */; };
 		B4C19FFE26C8427D009D97C6 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFD26C8427D009D97C6 /* BaseListController.swift */; };
 		B4C1A00026C842CB009D97C6 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FFF26C842CB009D97C6 /* AppsHorizontalController.swift */; };
 		B4C1A00226C85B0E009D97C6 /* AppRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A00126C85B0E009D97C6 /* AppRowCell.swift */; };
 		B4C1A00426C85E68009D97C6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A00326C85E68009D97C6 /* Extension.swift */; };
+		B4C1A00626C939B9009D97C6 /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A00526C939B9009D97C6 /* AppsPageHeader.swift */; };
+		B4C1A00826C93F58009D97C6 /* AppsHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A00726C93F58009D97C6 /* AppsHeaderHorizontalController.swift */; };
+		B4C1A00A26C944C0009D97C6 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1A00926C944C0009D97C6 /* AppsHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +45,15 @@
 		B4C19FEA26C55304009D97C6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		B4C19FED26C5F03B009D97C6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		B4C19FF026C5FB01009D97C6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		B4C19FF826C6EB02009D97C6 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
+		B4C19FF826C6EB02009D97C6 /* AppsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageController.swift; sourceTree = "<group>"; };
 		B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		B4C19FFD26C8427D009D97C6 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		B4C19FFF26C842CB009D97C6 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 		B4C1A00126C85B0E009D97C6 /* AppRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCell.swift; sourceTree = "<group>"; };
 		B4C1A00326C85E68009D97C6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B4C1A00526C939B9009D97C6 /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
+		B4C1A00726C93F58009D97C6 /* AppsHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalController.swift; sourceTree = "<group>"; };
+		B4C1A00926C944C0009D97C6 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +152,8 @@
 		B4C19FF726C6EA97009D97C6 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
-				B4C19FF826C6EB02009D97C6 /* AppsController.swift */,
+				B4C19FF826C6EB02009D97C6 /* AppsPageController.swift */,
+				B4C1A00726C93F58009D97C6 /* AppsHeaderHorizontalController.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 			children = (
 				B4C19FFB26C82C23009D97C6 /* AppsGroupCell.swift */,
 				B4C1A00126C85B0E009D97C6 /* AppRowCell.swift */,
+				B4C1A00526C939B9009D97C6 /* AppsPageHeader.swift */,
+				B4C1A00926C944C0009D97C6 /* AppsHeaderCell.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -238,19 +247,22 @@
 			files = (
 				B4C1A00426C85E68009D97C6 /* Extension.swift in Sources */,
 				B4C19FE026C3C9EF009D97C6 /* BaseTabBarController.swift in Sources */,
-				B4C19FF926C6EB03009D97C6 /* AppsController.swift in Sources */,
+				B4C19FF926C6EB03009D97C6 /* AppsPageController.swift in Sources */,
 				B4C19FFC26C82C24009D97C6 /* AppsGroupCell.swift in Sources */,
+				B4C1A00A26C944C0009D97C6 /* AppsHeaderCell.swift in Sources */,
 				B4C19FEE26C5F03B009D97C6 /* SearchResult.swift in Sources */,
 				B4C19FE226C425AB009D97C6 /* AppSearchController.swift in Sources */,
 				B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */,
 				B4C1A00226C85B0E009D97C6 /* AppRowCell.swift in Sources */,
 				B4C19FE926C5400C009D97C6 /* UIView + Layout.swift in Sources */,
+				B4C1A00626C939B9009D97C6 /* AppsPageHeader.swift in Sources */,
 				B4C19FEB26C55304009D97C6 /* VerticalStackView.swift in Sources */,
 				B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */,
 				B4C19FE626C446BE009D97C6 /* SearchResultCell.swift in Sources */,
 				B4C19FFE26C8427D009D97C6 /* BaseListController.swift in Sources */,
 				B4C1A00026C842CB009D97C6 /* AppsHorizontalController.swift in Sources */,
 				B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */,
+				B4C1A00826C93F58009D97C6 /* AppsHeaderHorizontalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
