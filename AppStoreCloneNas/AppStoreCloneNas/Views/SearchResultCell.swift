@@ -13,7 +13,7 @@ class SearchResultCell: UICollectionViewCell {
         didSet {
             nameLabel.text = appResult.trackName
             categoryLabel.text = appResult.primaryGenreName
-            ratingsLabel.text = "Rating \(appResult.averageUserRating ?? 0)"
+            ratingsLabel.text = "Rating: \(String(format: "%.2f", appResult.averageUserRating ?? 0))"
             let url = URL(string: appResult.artworkUrl100)
             appIconImageView.sd_setImage(with: url)
             screenshot1ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[0]))
