@@ -26,7 +26,11 @@ class AppsHorizontalController: BaseListController , UICollectionViewDelegateFlo
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppRowCell
+        let app = appGroup?.feed.results[indexPath.item]
+        cell.nameLabel.text = app?.name
+        cell.companyLabel.text = app?.artistName
+        cell.appIcon.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
         return cell
     }
     
