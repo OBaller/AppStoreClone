@@ -8,9 +8,9 @@
 import UIKit
 
 class AppsPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-   fileprivate let celId = "id"
+    let celId = "id"
     let headerId = "headerId"
-    
+    var editorChoice: AppGroupModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -21,13 +21,15 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         fetchData()
     }
     fileprivate func fetchData() {
-        print("Fetch games data")
         Service.shared.fetchGames { (appGroup, error) in
             if let error = error {
                 print("Failed to fetch games", error)
                 return
             }
-            print(appGroup?.feed.results)
+            self.editorChoice = appGroup
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -41,11 +43,14 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: celId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: celId, for: indexPath) as! AppsGroupCell
+        cell.titleLabel.text = editorChoice?.feed.title
+        cell.horizontalController.appGroup = editorChoice
+        cell.horizontalController.collectionView.reloadData()
         return cell
     }
     

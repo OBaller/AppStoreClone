@@ -10,7 +10,7 @@ import UIKit
 class AppsHorizontalController: BaseListController , UICollectionViewDelegateFlowLayout{
     
     let cellId = "cellId"
-    
+    var appGroup: AppGroupModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -22,7 +22,7 @@ class AppsHorizontalController: BaseListController , UICollectionViewDelegateFlo
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return appGroup?.feed.results.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
