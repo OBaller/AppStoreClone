@@ -10,7 +10,7 @@ import UIKit
 class AppsPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let celId = "id"
     let headerId = "headerId"
-   // var editorChoice: AppGroupModel?
+    // var editorChoice: AppGroupModel?
     var groups = [AppGroupModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,33 +21,39 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         
         fetchData()
     }
+    
+    
     fileprivate func fetchData() {
+        var group1: AppGroupModel?
+        var group2: AppGroupModel?
+        var group3: AppGroupModel?
+        
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
         Service.shared.fetchGames { (appGroup, error) in
-            if let group = appGroup {
-                self.groups.append(group)
-            }
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            dispatchGroup.leave()
+            group1 = appGroup
         }
-        
+        dispatchGroup.enter()
         Service.shared.fetchTopGrossing { (appGroup, error) in
-            if let group = appGroup {
-                self.groups.append(group)
-            }
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            dispatchGroup.leave()
+            group2 = appGroup
         }
         
+        dispatchGroup.enter()
         Service.shared.fetchTopFree { (appGroup, error) in
-            if let group = appGroup {
-                self.groups.append(group)
-            }
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            dispatchGroup.leave()
+            group3 = appGroup
         }
+        
+        // completion
+        dispatchGroup.notify(queue: .main) {
+            print("Completed dispacth group task")
+            self.groups = [group1, group2, group3].compactMap {$0}
+            self.collectionView.reloadData()
+        }
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -89,6 +95,17 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         fatalError("init(coder:) has not been implemented")
     }
     
-
-
+    
+    
 }
+
+//if let group = group1 {
+//    self.groups.append(group)
+//}
+//if let group = group2 {
+//    self.groups.append(group)
+//}
+//if let group = group3 {
+//    self.groups.append(group)
+//}
+//}
