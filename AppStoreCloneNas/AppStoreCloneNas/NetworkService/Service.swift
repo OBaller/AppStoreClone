@@ -39,12 +39,25 @@ class Service {
         
     }
     
+    func fetchTopGrossing(completion: @escaping (AppGroupModel?, Error?) -> ()) {
+        let urlString = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-grossing/all/50/explicit.json"
+        fetchAppGroup(urlString: urlString, completion: completion)
+    }
+    
     func fetchGames(completion: @escaping (AppGroupModel?, Error?) -> ()) {
-       guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/50/explicit.json") else {return}
-        // fetch data
+        fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/25/explicit.json", completion: completion)
+    }
+    
+    func fetchTopFree(completion: @escaping (AppGroupModel?, Error?) -> ()) {
+        fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/25/explicit.json", completion: completion)
+    }
+    
+    // helper for multiple fetch
+    
+    func fetchAppGroup(urlString: String, completion: @escaping (AppGroupModel?, Error?) -> Void) {
+        guard let url = URL(string: urlString) else {return}
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                //print("Failed to fetch games", error)
                 completion(nil, error)
             }
             guard let data = data else {return}
@@ -52,14 +65,11 @@ class Service {
             do {
                 let gameDecoder = try
                     JSONDecoder().decode(AppGroupModel.self, from: data)
-                //gameDecoder.feed.results.forEach({print($0.name)})
                 completion(gameDecoder, nil)
                 
             } catch let jsErr {
                 completion(nil, jsErr)
-               // print("Failed to decode data", jsErr)
             }
         }.resume()
-        
     }
 }
