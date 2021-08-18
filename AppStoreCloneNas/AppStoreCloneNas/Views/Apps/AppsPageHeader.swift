@@ -8,7 +8,6 @@
 import UIKit
 
 class AppsPageHeader: UICollectionReusableView {
-    
     let appHeaderHorizontalController = AppsHeaderHorizontalController()
     
     override init(frame: CGRect) {

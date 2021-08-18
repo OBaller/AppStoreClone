@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B49BAD9026CCFF9E003C98C8 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BAD8F26CCFF9E003C98C8 /* HeaderModel.swift */; };
 		B4C19FCA26C3C3B8009D97C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FC926C3C3B8009D97C6 /* AppDelegate.swift */; };
 		B4C19FCC26C3C3B8009D97C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C19FCB26C3C3B8009D97C6 /* SceneDelegate.swift */; };
 		B4C19FD326C3C3CE009D97C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C19FD226C3C3CE009D97C6 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B49BAD8F26CCFF9E003C98C8 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		B4C19FC626C3C3B8009D97C6 /* AppStoreCloneNas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreCloneNas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C19FC926C3C3B8009D97C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C19FCB26C3C3B8009D97C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				B4C19FED26C5F03B009D97C6 /* SearchResult.swift */,
 				B4C1A00B26C9D5FC009D97C6 /* AppGroupModel.swift */,
+				B49BAD8F26CCFF9E003C98C8 /* HeaderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				B4C1A00626C939B9009D97C6 /* AppsPageHeader.swift in Sources */,
 				B4C19FEB26C55304009D97C6 /* VerticalStackView.swift in Sources */,
 				B4C19FF126C5FB01009D97C6 /* Service.swift in Sources */,
+				B49BAD9026CCFF9E003C98C8 /* HeaderModel.swift in Sources */,
 				B4C19FE626C446BE009D97C6 /* SearchResultCell.swift in Sources */,
 				B4C19FFE26C8427D009D97C6 /* BaseListController.swift in Sources */,
 				B4C1A00026C842CB009D97C6 /* AppsHorizontalController.swift in Sources */,

@@ -72,4 +72,32 @@ class Service {
             }
         }.resume()
     }
+    
+    func FetchHeaderData(urlString: String, completion: @escaping ([HeaderModel]?, Error?) -> Void) {
+        let urlString = "https://api.letsbuildthatapp.com/appstore/social"
+        guard let url = URL(string: urlString) else {return}
+        
+        // fetch data from internet
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("failed to fetch apps", error)
+                completion(nil, error)
+            }
+           
+            guard let data = data else {return}
+            
+            do {
+                let jsonDecoder = try
+                    JSONDecoder().decode([HeaderModel].self, from: data)
+                
+                completion(jsonDecoder, nil)
+                
+            } catch let jsonErr {
+                print("failed to decode json data", jsonErr)
+                completion(nil, jsonErr)
+            }
+            
+        }.resume()
+    }
 }
+

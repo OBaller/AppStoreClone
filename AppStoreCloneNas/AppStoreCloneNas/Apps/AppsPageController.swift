@@ -10,7 +10,7 @@ import UIKit
 class AppsPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let celId = "id"
     let headerId = "headerId"
-    // var editorChoice: AppGroupModel?
+   var headerModel = [HeaderModel]()
     var groups = [AppGroupModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,13 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
             group3 = appGroup
         }
         
+        dispatchGroup.enter()
+        Service.shared.FetchHeaderData(urlString: "") { (result, error) in
+            //result?.forEach({print($0.name )})
+            dispatchGroup.leave()
+            self.headerModel = result ?? []
+        }
+        
         // completion
         dispatchGroup.notify(queue: .main) {
             print("Completed dispacth group task")
@@ -57,12 +64,14 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsPageHeader
+        header.appHeaderHorizontalController.headerModel = self.headerModel
+        header.appHeaderHorizontalController.collectionView.reloadData()
         return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 0)
+        return .init(width: view.frame.width, height: 300)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
