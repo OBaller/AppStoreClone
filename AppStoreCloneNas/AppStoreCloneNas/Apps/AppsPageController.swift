@@ -18,7 +18,7 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         return aiv
     }()
     
-   var headerModel = [HeaderModel]()
+    var headerModel = [HeaderModel]()
     var groups = [AppGroupModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,6 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         activityIndicator.fillSuperview()
         fetchData()
     }
-    
     
     fileprivate func fetchData() {
         var group1: AppGroupModel?
@@ -91,10 +90,15 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: celId, for: indexPath) as! AppsGroupCell
         let appGroup = groups[indexPath.item]
-        
         cell.titleLabel.text = appGroup.feed.title
         cell.horizontalController.appGroup = appGroup
         cell.horizontalController.collectionView.reloadData()
+        cell.horizontalController.didSelectHandler = { [weak self] feedResult in
+                let redController = AppDetailController()
+                redController.view.backgroundColor = .white
+            self?.navigationController?.pushViewController(redController, animated: true)
+            redController.navigationItem.title = feedResult.name
+        }
         return cell
     }
     

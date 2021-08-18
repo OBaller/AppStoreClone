@@ -7,18 +7,15 @@
 
 import UIKit
 
-class AppsHorizontalController: BaseListController , UICollectionViewDelegateFlowLayout{
-    
+class AppsHorizontalController: HorizontalSnappingController , UICollectionViewDelegateFlowLayout{
+    var didSelectHandler: ((FeedResult) -> ())?
     let cellId = "cellId"
     var appGroup: AppGroupModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: cellId)
-        
-        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
-        }
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,5 +45,11 @@ class AppsHorizontalController: BaseListController , UICollectionViewDelegateFlo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: topBottomPadding, left: 16, bottom: topBottomPadding, right: 16)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = appGroup?.feed.results[indexPath.item] {
+            didSelectHandler?(app)
+        }
     }
 }
