@@ -10,6 +10,14 @@ import UIKit
 class AppsPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let celId = "id"
     let headerId = "headerId"
+    let activityIndicator: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .large)
+        aiv.color = .black
+        aiv.startAnimating()
+        aiv.hidesWhenStopped = true
+        return aiv
+    }()
+    
    var headerModel = [HeaderModel]()
     var groups = [AppGroupModel]()
     override func viewDidLoad() {
@@ -18,7 +26,8 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: celId)
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
-        
+        view.addSubview(activityIndicator)
+        activityIndicator.fillSuperview()
         fetchData()
     }
     
@@ -57,6 +66,7 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         // completion
         dispatchGroup.notify(queue: .main) {
             print("Completed dispacth group task")
+            self.activityIndicator.stopAnimating()
             self.groups = [group1, group2, group3].compactMap {$0}
             self.collectionView.reloadData()
         }
