@@ -8,6 +8,14 @@
 import UIKit
 
 class AppDetailsCell: UICollectionViewCell {
+    var app: Result! {
+        didSet {
+            nameLabel.text = app?.trackName
+            releaseNotesLabel.text = app?.releaseNotes
+            appIcon.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+            priceButton.setTitle(app?.formattedPrice, for: .normal)
+        }
+    }
     
     let appIcon = UIImageView(cornerRadius: 16)
     
@@ -22,7 +30,7 @@ class AppDetailsCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        appIcon.backgroundColor = .red
+        //appIcon.backgroundColor = .red
         appIcon.constrainWidth(constant: 140)
         appIcon.constrainHeight(constant: 140)
         
@@ -40,11 +48,11 @@ class AppDetailsCell: UICollectionViewCell {
                     nameLabel,
                     UIStackView(arrangedSubviews: [priceButton, UIView()]),
                     UIView()
-                    ], spacing: 12)
-                ], customSpacing: 20),
+                ], spacing: 12)
+            ], customSpacing: 20),
             whatsNewLabel,
             releaseNotesLabel
-            ], spacing: 16)
+        ], spacing: 16)
         addSubview(stackView)
         stackView.fillSuperview(padding: .init(top: 20, left: 20, bottom: 20, right: 20))
     }
