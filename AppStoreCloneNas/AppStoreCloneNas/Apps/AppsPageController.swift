@@ -94,10 +94,11 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         cell.horizontalController.appGroup = appGroup
         cell.horizontalController.collectionView.reloadData()
         cell.horizontalController.didSelectHandler = { [weak self] feedResult in
-                let redController = AppDetailController()
-                redController.view.backgroundColor = .white
-            self?.navigationController?.pushViewController(redController, animated: true)
-            redController.navigationItem.title = feedResult.name
+                let detailController = AppDetailController()
+            detailController.appId = feedResult.id
+                detailController.view.backgroundColor = .white
+            self?.navigationController?.pushViewController(detailController, animated: true)
+            detailController.navigationItem.title = feedResult.name
         }
         return cell
     }

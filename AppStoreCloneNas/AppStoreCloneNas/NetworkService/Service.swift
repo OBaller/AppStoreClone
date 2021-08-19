@@ -21,7 +21,7 @@ class Service {
                 print("failed to fetch apps", error)
                 completion([], nil)
             }
-           
+            
             guard let data = data else {return}
             
             do {
@@ -83,7 +83,7 @@ class Service {
                 print("failed to fetch apps", error)
                 completion(nil, error)
             }
-           
+            
             guard let data = data else {return}
             
             do {
@@ -95,6 +95,33 @@ class Service {
             } catch let jsonErr {
                 print("failed to decode json data", jsonErr)
                 completion(nil, jsonErr)
+            }
+            
+        }.resume()
+    }
+    
+    func fetchDetails(detailId: String, completion: @escaping ([Result], Error?) -> ()) {
+        let urlString = "https://itunes.apple.com/lookup?id=\(detailId)"
+        guard let url = URL(string: urlString) else {return}
+        
+        // fetch data from internet
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("failed to fetch apps", error)
+                completion([], nil)
+            }
+            
+            guard let data = data else {return}
+            
+            do {
+                let details = try
+                    JSONDecoder().decode(SearchResult.self, from: data)
+                
+                completion(details.results, nil)
+                
+            } catch let jsonErr {
+                print("failed to decode json data", jsonErr)
+                completion([], nil)
             }
             
         }.resume()
