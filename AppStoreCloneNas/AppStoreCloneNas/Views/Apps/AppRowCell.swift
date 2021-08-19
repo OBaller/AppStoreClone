@@ -18,7 +18,7 @@ class AppRowCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        appIcon.backgroundColor = .purple
+        //appIcon.backgroundColor = .purple
         appIcon.constrainWidth(constant: 64)
         appIcon.constrainHeight(constant: 64)
         
